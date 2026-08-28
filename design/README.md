@@ -81,3 +81,13 @@ extension, open one of the files above in the browser, run the extension, import
 place the image in Figma as a reference layer. Not editable.
 
 Fonts to install in Figma either way: **MuseoModerno** and **Albert Sans** (both on Google Fonts).
+
+### Layer names on import
+
+Every section carries an `id`, so an importer names the Figma layers properly instead of
+producing a stack of unnamed divs:
+
+`Header` · `Hero` · `Protein Partners` · `Best Deals` · `Shop Fitness Equipment` ·
+`Features` · `Promo Posters` · `Top Fitness Equipment` · `Banner` · `Brand Strip` ·
+`Recommended For You` · `Instant Assistance` · `Metrics` · `FAQ` · `Footer` ·
+`Page Hero` · `Product Grid + Filters` · `Delivery / Assembly / Warranty`
