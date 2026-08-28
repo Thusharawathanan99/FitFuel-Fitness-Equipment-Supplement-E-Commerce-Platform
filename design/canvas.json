@@ -1,33 +1,192 @@
 {
   "pages": [
-    { "id": "page-1", "name": "Storefront" },
-    { "id": "page-2", "name": "Buy flow & account" },
-    { "id": "page-3", "name": "Admin & mobile" },
-    { "id": "page-4", "name": "Design system" }
+    {
+      "id": "page-1",
+      "name": "Storefront"
+    },
+    {
+      "id": "page-2",
+      "name": "Buy flow & account"
+    },
+    {
+      "id": "page-3",
+      "name": "Admin & mobile"
+    },
+    {
+      "id": "page-4",
+      "name": "Design system"
+    }
   ],
   "artboards": [
-    { "file": "Main.dc.html",     "page": "page-1", "x": 0,    "y": 0, "w": 1440, "h": 5000, "title": "Home" },
-    { "file": "Shop.dc.html",     "page": "page-1", "x": 1560, "y": 0, "w": 1440, "h": 2960, "title": "Equipment listing" },
-    { "file": "Product.dc.html",  "page": "page-1", "x": 3120, "y": 0, "w": 1440, "h": 3600, "title": "Product detail" },
-
-    { "file": "Cart.dc.html",     "page": "page-2", "x": 0,    "y": 0, "w": 1440, "h": 1990, "title": "Cart" },
-    { "file": "Checkout.dc.html", "page": "page-2", "x": 1560, "y": 0, "w": 1440, "h": 2500, "title": "Checkout" },
-    { "file": "Auth.dc.html",     "page": "page-2", "x": 3120, "y": 0, "w": 1440, "h": 900,  "title": "Log in / register" },
-    { "file": "Account.dc.html",  "page": "page-2", "x": 4680, "y": 0, "w": 1440, "h": 2100, "title": "My account" },
-
-    { "file": "Admin.dc.html",         "page": "page-3", "x": 0,    "y": 0, "w": 1440, "h": 1240, "title": "Admin dashboard" },
-    { "file": "MobileHome.dc.html",    "page": "page-3", "x": 1560, "y": 0, "w": 390,  "h": 1900, "title": "Mobile home" },
-    { "file": "MobileProduct.dc.html", "page": "page-3", "x": 2070, "y": 0, "w": 390,  "h": 1560, "title": "Mobile product" },
-
-    { "file": "System.dc.html",   "page": "page-4", "x": 0, "y": 0, "w": 1280, "h": 2700, "title": "Design system" }
+    {
+      "file": "Main.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 5000,
+      "title": "Home"
+    },
+    {
+      "file": "Shop.dc.html",
+      "page": "page-1",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 2960,
+      "title": "Equipment listing"
+    },
+    {
+      "file": "Product.dc.html",
+      "page": "page-1",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 3600,
+      "title": "Supplement detail"
+    },
+    {
+      "file": "EquipmentProduct.dc.html",
+      "page": "page-1",
+      "x": 4680,
+      "y": 0,
+      "w": 1440,
+      "h": 3300,
+      "title": "Equipment detail"
+    },
+    {
+      "file": "Cart.dc.html",
+      "page": "page-2",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1990,
+      "title": "Cart"
+    },
+    {
+      "file": "Checkout.dc.html",
+      "page": "page-2",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 2500,
+      "title": "Checkout"
+    },
+    {
+      "file": "Auth.dc.html",
+      "page": "page-2",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "Log in / register"
+    },
+    {
+      "file": "Account.dc.html",
+      "page": "page-2",
+      "x": 4680,
+      "y": 0,
+      "w": 1440,
+      "h": 2100,
+      "title": "My account"
+    },
+    {
+      "file": "Admin.dc.html",
+      "page": "page-3",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1240,
+      "title": "Admin dashboard"
+    },
+    {
+      "file": "MobileHome.dc.html",
+      "page": "page-3",
+      "x": 1560,
+      "y": 0,
+      "w": 390,
+      "h": 1900,
+      "title": "Mobile home"
+    },
+    {
+      "file": "MobileProduct.dc.html",
+      "page": "page-3",
+      "x": 2070,
+      "y": 0,
+      "w": 390,
+      "h": 1560,
+      "title": "Mobile product"
+    },
+    {
+      "file": "System.dc.html",
+      "page": "page-4",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 2700,
+      "title": "Design system"
+    }
   ],
   "annotations": [
-    { "id": "note-storefront", "page": "page-1", "x": 0,    "y": -150, "w": 640, "text": "STOREFRONT — desktop 1440.\nHome carries both shelves: equipment in graphite + volt, supplements in ember. Listing and product detail follow the same 4-up card grid." },
-    { "id": "note-batch",      "page": "page-1", "x": 3120, "y": -150, "w": 640, "text": "The batch / manufactured / best-before block on the product page is the platform's differentiator — supplements are never listed without it." },
-    { "id": "note-buyflow",    "page": "page-2", "x": 0,    "y": -150, "w": 700, "text": "BUY FLOW — cart → delivery → payment → confirmation, one step indicator across all screens. The stack discount is applied automatically; there is no coupon step." },
-    { "id": "note-admin",      "page": "page-3", "x": 0,    "y": -150, "w": 640, "text": "ADMIN — the two tiles that matter for this business are low-stock SKUs and batches expiring within 90 days. Revenue chart is a single series, so no legend." },
-    { "id": "note-mobile",     "page": "page-3", "x": 1560, "y": -150, "w": 640, "text": "MOBILE 390 — full scroll length, not a single viewport. No fake status bar: the real one renders on top. Every tappable element is at least 44px." },
-    { "id": "note-system",     "page": "page-4", "x": 0,    "y": -150, "w": 640, "text": "Tokens and components every other artboard is built from. Anton for headings, Instrument Sans for everything else, 3px radius, no drop shadows." }
+    {
+      "id": "note-storefront",
+      "page": "page-1",
+      "x": 0,
+      "y": -150,
+      "w": 640,
+      "text": "STOREFRONT \u2014 desktop 1440.\nHome carries both shelves: equipment in graphite + volt, supplements in ember. Listing and product detail follow the same 4-up card grid."
+    },
+    {
+      "id": "note-batch",
+      "page": "page-1",
+      "x": 3120,
+      "y": -150,
+      "w": 640,
+      "text": "Two product-detail templates, one system. SUPPLEMENT detail leads with batch / manufactured / best-before and a nutrition table."
+    },
+    {
+      "id": "note-buyflow",
+      "page": "page-2",
+      "x": 0,
+      "y": -150,
+      "w": 700,
+      "text": "BUY FLOW \u2014 cart \u2192 delivery \u2192 payment \u2192 confirmation, one step indicator across all screens. The stack discount is applied automatically; there is no coupon step."
+    },
+    {
+      "id": "note-admin",
+      "page": "page-3",
+      "x": 0,
+      "y": -150,
+      "w": 640,
+      "text": "ADMIN \u2014 the two tiles that matter for this business are low-stock SKUs and batches expiring within 90 days. Revenue chart is a single series, so no legend."
+    },
+    {
+      "id": "note-mobile",
+      "page": "page-3",
+      "x": 1560,
+      "y": -150,
+      "w": 640,
+      "text": "MOBILE 390 \u2014 full scroll length, not a single viewport. No fake status bar: the real one renders on top. Every tappable element is at least 44px."
+    },
+    {
+      "id": "note-system",
+      "page": "page-4",
+      "x": 0,
+      "y": -150,
+      "w": 640,
+      "text": "Tokens and components every other artboard is built from. Anton for headings, Instrument Sans for everything else, 3px radius, no drop shadows."
+    },
+    {
+      "id": "note-equipment",
+      "page": "page-1",
+      "x": 4680,
+      "y": -150,
+      "w": 640,
+      "text": "EQUIPMENT detail is the other half: a spec table (steel gauge, capacity, footprint, hole spacing), freight and crate info for a 138kg item, 0% instalments, assembly booking and a lifetime frame warranty \u2014 none of which a supplement page needs."
+    }
   ],
-  "launch": { "view": "canvas", "page": "page-1" }
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
 }

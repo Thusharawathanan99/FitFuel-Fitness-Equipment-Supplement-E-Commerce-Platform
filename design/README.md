@@ -9,7 +9,8 @@ Eleven artboards on one pan/zoom canvas, published as a Design artifact.
 |---|---|---|
 | `Main.dc.html` | Home | 1440 × 5000 |
 | `Shop.dc.html` | Equipment listing (filters + 3-up grid) | 1440 × 2960 |
-| `Product.dc.html` | Product detail (supplement PDP) | 1440 × 3600 |
+| `Product.dc.html` | Supplement product detail | 1440 × 3600 |
+| `EquipmentProduct.dc.html` | Equipment product detail (specs, freight, warranty) | 1440 × 3300 |
 | `Cart.dc.html` | Cart | 1440 × 1990 |
 | `Checkout.dc.html` | Checkout | 1440 × 2500 |
 | `Auth.dc.html` | Log in / register | 1440 × 900 |
