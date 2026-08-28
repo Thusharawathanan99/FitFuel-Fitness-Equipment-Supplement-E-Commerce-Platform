@@ -60,3 +60,24 @@ republish `fitfuel-ecommerce-design.html`.
 ```bash
 ./compose.sh Equipment.dc.html 1463 3900 _b_equip.html
 ```
+
+## Getting this into Figma
+
+`design/export/` holds standalone HTML — no canvas runtime, just the page:
+
+| File | Page |
+|---|---|
+| `export/fitfuel-home.html` | Home page (1463 wide) |
+| `export/fitfuel-equipment.html` | Fitness Equipment page |
+| `export/fitfuel-tokens.html` | Design tokens |
+
+**Route A — Figma MCP (editable layers, best).** Reconnect the Figma MCP server and ask
+Claude to push the design in; it writes real frames, auto-layout and text nodes.
+
+**Route B — html.to.design browser extension (editable layers).** Install the plugin +
+extension, open one of the files above in the browser, run the extension, import into Figma.
+
+**Route C — PNG / PDF (flat image).** Open the published canvas, Export → PNG or PDF, then
+place the image in Figma as a reference layer. Not editable.
+
+Fonts to install in Figma either way: **MuseoModerno** and **Albert Sans** (both on Google Fonts).
