@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    *{ box-sizing: border-box; }
+    body { margin: 0; background: #F7F4ED; color: #121210;
+           font-family: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+           -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, h4 { margin: 0; font-family: 'Anton', 'Arial Narrow', Impact, sans-serif;
+                     font-weight: 400; text-transform: uppercase; letter-spacing: 0.005em; }
+    p { margin: 0; }
+    a { color: #121210; text-decoration: none; }
+    a:hover { color: #E8642E; }
+    .lbl { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+    .nav a:hover { color: #E8642E; }
+  </style>
+</helmet>
+
+<div style="width: 1280px; background: #F7F4ED;">
+
+  <div style="padding: 56px 56px 0; display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl" style="color: #6F6B5E;">FitFuel &middot; Fitness Equipment &amp; Supplement E-Commerce Platform</span>
+    <h1 style="font-size: 60px; line-height: 0.95;">Design system</h1>
+    <p style="font-size: 16px; line-height: 1.65; color: #55524A; max-width: 640px;">Every screen in this file is built from the tokens and components below. Equipment reads in graphite and volt; supplements carry the ember accent.</p>
+  </div>
+
+  <!-- colour -->
+  <div style="padding: 48px 56px 0;">
+    <h2 style="font-size: 30px; margin-bottom: 22px;">Colour</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;">
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #121210;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Ink</span><span style="font-size: 13px; color: #6F6B5E;">#121210 &middot; surfaces, text</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #2A2823;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Ink soft</span><span style="font-size: 13px; color: #6F6B5E;">#2A2823 &middot; dividers on dark</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #CBF43C;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Volt</span><span style="font-size: 13px; color: #6F6B5E;">#CBF43C &middot; primary accent</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #E8642E;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Ember</span><span style="font-size: 13px; color: #6F6B5E;">#E8642E &middot; supplements, offers</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #F7F4ED;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Paper</span><span style="font-size: 13px; color: #6F6B5E;">#F7F4ED &middot; page background</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #EDE8DB;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Paper 2</span><span style="font-size: 13px; color: #6F6B5E;">#EDE8DB &middot; media wells</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #DAD4C4;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Line</span><span style="font-size: 13px; color: #6F6B5E;">#DAD4C4 &middot; hairlines</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; overflow: hidden;">
+        <div style="height: 108px; background: #6F6B5E;"></div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 14px; font-weight: 700;">Muted</span><span style="font-size: 13px; color: #6F6B5E;">#6F6B5E &middot; secondary text</span></div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 16px;">
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+        <span style="width: 34px; height: 34px; border-radius: 3px; background: #4C8B2B; flex-shrink: 0;"></span>
+        <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">Good</span><span style="font-size: 12px; color: #6F6B5E;">#4C8B2B &middot; in stock, paid</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+        <span style="width: 34px; height: 34px; border-radius: 3px; background: #E8642E; flex-shrink: 0;"></span>
+        <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">Warning</span><span style="font-size: 12px; color: #6F6B5E;">#E8642E &middot; low stock</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+        <span style="width: 34px; height: 34px; border-radius: 3px; background: #B3311A; flex-shrink: 0;"></span>
+        <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">Critical</span><span style="font-size: 12px; color: #6F6B5E;">#B3311A &middot; expiring, on hold</span></div>
+      </div>
+      <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+        <span style="width: 34px; height: 34px; border-radius: 3px; background: #A6A093; flex-shrink: 0;"></span>
+        <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">Neutral</span><span style="font-size: 12px; color: #6F6B5E;">#A6A093 &middot; refunded, archived</span></div>
+      </div>
+    </div>
+    <p style="font-size: 13px; color: #6F6B5E; margin-top: 14px;">Status colours always ship with an icon and a word &mdash; never colour alone.</p>
+  </div>
+
+  <!-- type -->
+  <div style="padding: 48px 56px 0;">
+    <h2 style="font-size: 30px; margin-bottom: 22px;">Typography</h2>
+    <div style="display: flex; gap: 44px;">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; align-items: baseline; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid #DAD4C4;">
+          <span class="lbl" style="color: #6F6B5E; width: 130px; flex-shrink: 0;">Display / 88</span>
+          <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 62px; line-height: 0.9; text-transform: uppercase;">Train hard</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid #DAD4C4;">
+          <span class="lbl" style="color: #6F6B5E; width: 130px; flex-shrink: 0;">H1 / 48</span>
+          <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 40px; text-transform: uppercase;">Strength equipment</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid #DAD4C4;">
+          <span class="lbl" style="color: #6F6B5E; width: 130px; flex-shrink: 0;">H2 / 30</span>
+          <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 28px; text-transform: uppercase;">Best-selling supplements</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid #DAD4C4;">
+          <span class="lbl" style="color: #6F6B5E; width: 130px; flex-shrink: 0;">Body / 16</span>
+          <span style="font-size: 16px; line-height: 1.65;">Rack it, load it, lift it &mdash; then refuel it.</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid #DAD4C4;">
+          <span class="lbl" style="color: #6F6B5E; width: 130px; flex-shrink: 0;">Small / 13</span>
+          <span style="font-size: 13px; color: #55524A;">Batch APX-2411-B7 &middot; best before Nov 2027</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span class="lbl" style="color: #6F6B5E; width: 130px; flex-shrink: 0;">Micro label / 11</span>
+          <span class="lbl">Island-wide delivery</span>
+        </div>
+      </div>
+      <div style="width: 320px; flex-shrink: 0; background: #121210; color: #F7F4ED; border-radius: 3px; padding: 28px; display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span class="lbl" style="color: #CBF43C;">Display face</span>
+          <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 40px;">Anton</span>
+          <span style="font-size: 13px; color: #8E897B; line-height: 1.6;">Headings only, always uppercase. Fallback: Arial Narrow, Impact.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 20px; border-top: 1px solid #2A2823;">
+          <span class="lbl" style="color: #CBF43C;">Text face</span>
+          <span style="font-size: 34px; font-weight: 600;">Instrument Sans</span>
+          <span style="font-size: 13px; color: #8E897B; line-height: 1.6;">Body, UI, prices and labels at 400/600/700. Fallback: Helvetica Neue, Arial.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- components -->
+  <div style="padding: 48px 56px 0;">
+    <h2 style="font-size: 30px; margin-bottom: 22px;">Components</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+
+      <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="lbl" style="color: #6F6B5E;">Buttons &middot; 56 / 46 / 38px</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          <span style="height: 56px; background: #121210; color: #F7F4ED; padding: 0 28px; border-radius: 3px; display: flex; align-items: center; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Primary</span>
+          <span style="height: 56px; background: #CBF43C; color: #121210; padding: 0 28px; border-radius: 3px; display: flex; align-items: center; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Accent</span>
+          <span style="height: 56px; border: 1px solid #121210; padding: 0 28px; border-radius: 3px; display: flex; align-items: center; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Outline</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          <span style="height: 46px; background: #121210; color: #F7F4ED; padding: 0 22px; border-radius: 3px; display: flex; align-items: center; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Medium</span>
+          <span style="height: 38px; border: 1px solid #C6BFAC; padding: 0 16px; border-radius: 3px; display: flex; align-items: center; font-size: 13px; font-weight: 600;">Small</span>
+          <span style="height: 46px; background: #EDE8DB; color: #A6A093; padding: 0 22px; border-radius: 3px; display: flex; align-items: center; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Disabled</span>
+          <a href="#" style="font-size: 14px; font-weight: 600; border-bottom: 1px solid #121210; padding-bottom: 2px;">Text link</a>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="lbl" style="color: #6F6B5E;">Badges &amp; chips</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 9px; align-items: center;">
+          <span class="lbl" style="background: #CBF43C; color: #121210; padding: 6px 10px; border-radius: 2px;">Best seller</span>
+          <span class="lbl" style="background: #121210; color: #CBF43C; padding: 6px 10px; border-radius: 2px;">New</span>
+          <span class="lbl" style="background: #E8642E; color: #F7F4ED; padding: 6px 10px; border-radius: 2px;">Save 12%</span>
+          <span class="lbl" style="background: #EDE8DB; color: #6F6B5E; padding: 6px 10px; border-radius: 2px;">Out of stock</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 9px; align-items: center;">
+          <span style="display: flex; align-items: center; gap: 7px; background: #121210; color: #F7F4ED; font-size: 12px; font-weight: 600; padding: 8px 12px; border-radius: 3px;">Dumbbells
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+          <span style="display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: #4C8B2B;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4C8B2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>In stock</span>
+          <span style="display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: #E8642E;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E8642E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17H2.5z"/><path d="M12 9.5v4M12 17h.01"/></svg>Only 7 left</span>
+          <span style="display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: #B3311A;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B3311A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.2M12 16.5h.01"/></svg>Expiring</span>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="lbl" style="color: #6F6B5E;">Form controls &middot; 50px field height</span>
+        <div style="height: 50px; border: 1px solid #C6BFAC; background: #FAF8F3; border-radius: 3px; display: flex; align-items: center; padding: 0 15px; font-size: 15px; color: #8E897B;">Rest &mdash; placeholder</div>
+        <div style="height: 50px; border: 1px solid #121210; background: #FFFFFF; border-radius: 3px; display: flex; align-items: center; padding: 0 15px; font-size: 15px;">Focus &mdash; typed value</div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="height: 50px; border: 1px solid #B3311A; background: #FFFFFF; border-radius: 3px; display: flex; align-items: center; padding: 0 15px; font-size: 15px;">Error &mdash; invalid value</div>
+          <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #B3311A;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B3311A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.2M12 16.5h.01"/></svg>Enter a valid mobile number</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+          <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 18px; height: 18px; border-radius: 2px; background: #121210; display: flex; align-items: center; justify-content: center;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span style="font-size: 14px;">Checkbox</span></span>
+          <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid #121210; display: flex; align-items: center; justify-content: center;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #121210;"></span></span><span style="font-size: 14px;">Radio</span></span>
+          <span style="display: flex; align-items: center; gap: 10px;"><span style="width: 34px; height: 20px; border-radius: 10px; background: #121210; display: flex; align-items: center; padding: 0 3px; justify-content: flex-end;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #CBF43C;"></span></span><span style="font-size: 14px;">Toggle</span></span>
+          <span style="width: 122px; height: 46px; border: 1px solid #C6BFAC; border-radius: 3px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            <span style="font-size: 16px; font-weight: 700;">1</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="lbl" style="color: #6F6B5E;">Icon set &middot; 24px grid, 1.7 stroke</span>
+        <div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v10H2z"/><path d="M13 10h4.5l3.5 3.4V17H13z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.1 8-7.5 9.5-4.4-1.5-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.6-6.4"/><path d="M3 4v5h5"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 0-3.3 6.9L21 20z"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.2 3.1c-.7.3-.8.9-.8 1.5"/><path d="M12 17h.01"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V4M16 19v-7M22 19H2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#121210"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+        </div>
+        <p style="font-size: 13px; line-height: 1.6; color: #6F6B5E;">Stroke icons only &mdash; no emoji, no filled glyphs except the rating star.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- product card anatomy + grid -->
+  <div style="padding: 48px 56px 0;">
+    <h2 style="font-size: 30px; margin-bottom: 22px;">Product card &amp; layout rules</h2>
+    <div style="display: flex; gap: 20px; align-items: stretch;">
+      <div style="width: 300px; flex-shrink: 0; background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; flex-direction: column;">
+        <div style="height: 236px; background: #EDE8DB; border-bottom: 1px solid #DAD4C4; position: relative; display: flex; align-items: center; justify-content: center;">
+          <span class="lbl" style="position: absolute; top: 14px; left: 14px; background: #CBF43C; color: #121210; padding: 5px 9px; border-radius: 2px;">Best seller</span>
+          <span style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; background: #F7F4ED; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg></span>
+          <svg width="176" height="106" viewBox="0 0 200 120"><rect x="58" y="52" width="84" height="16" rx="3" fill="#2A2823"/><rect x="42" y="34" width="16" height="52" rx="3" fill="#121210"/><rect x="142" y="34" width="16" height="52" rx="3" fill="#121210"/><rect x="22" y="24" width="20" height="72" rx="4" fill="#2A2823"/><rect x="158" y="24" width="20" height="72" rx="4" fill="#2A2823"/></svg>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+          <span class="lbl" style="color: #6F6B5E;">IronCore</span>
+          <h4 style="font-size: 17px; line-height: 1.2;">Rubber Hex Dumbbell 20kg</h4>
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+            <span style="font-size: 13px; font-weight: 600;">4.9</span><span style="font-size: 13px; color: #6F6B5E;">(412)</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 9px;">
+            <span style="font-size: 21px; font-weight: 700;">Rs 18,900</span>
+            <span style="font-size: 14px; color: #6F6B5E; text-decoration: line-through;">Rs 22,000</span>
+          </div>
+          <div style="margin-top: 8px; height: 46px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 9px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+            <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Add to cart</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex-grow: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+        <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="lbl" style="color: #6F6B5E;">Grid</span>
+          <p style="font-size: 14px; line-height: 1.65; color: #35322C;">1440 desktop with 64px page gutters; 4-up product grid at 20px gap, 3-up inside a filtered listing, 2-up at 390 mobile with 12px gap.</p>
+        </div>
+        <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="lbl" style="color: #6F6B5E;">Radius &amp; edges</span>
+          <p style="font-size: 14px; line-height: 1.65; color: #35322C;">3px on every surface, 2px on badges, 50% on avatars and toggles only. Hairlines are 1px #DAD4C4; no drop shadows anywhere.</p>
+        </div>
+        <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="lbl" style="color: #6F6B5E;">Spacing</span>
+          <p style="font-size: 14px; line-height: 1.65; color: #35322C;">Section rhythm 78px, card padding 20&ndash;26px, control gap 10&ndash;14px. All sibling groups use flex or grid with gap, never margins.</p>
+        </div>
+        <div style="border: 1px solid #DAD4C4; border-radius: 3px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="lbl" style="color: #6F6B5E;">Touch targets</span>
+          <p style="font-size: 14px; line-height: 1.65; color: #35322C;">No tappable element under 44px on mobile. Desktop buttons are 56/46/38px; the quantity stepper stays 46px everywhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 66px;"></div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1280,"height":2560}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
