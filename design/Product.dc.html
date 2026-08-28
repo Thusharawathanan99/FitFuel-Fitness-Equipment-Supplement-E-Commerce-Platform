@@ -1,0 +1,556 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    *{ box-sizing: border-box; }
+    body { margin: 0; background: #F7F4ED; color: #121210;
+           font-family: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+           -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, h4 { margin: 0; font-family: 'Anton', 'Arial Narrow', Impact, sans-serif;
+                     font-weight: 400; text-transform: uppercase; letter-spacing: 0.005em; }
+    p { margin: 0; }
+    a { color: #121210; text-decoration: none; }
+    a:hover { color: #E8642E; }
+    .lbl { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+    .nav a:hover { color: #E8642E; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #F7F4ED;">
+  <!-- announcement -->
+  <div style="height: 40px; background: #121210; color: #F7F4ED; display: flex; align-items: center; justify-content: center; gap: 40px;">
+    <span class="lbl" style="color: #CBF43C;">Island-wide delivery in 2&ndash;4 days</span>
+    <span class="lbl" style="color: #8E897B;">Free shipping over Rs 15,000</span>
+    <span class="lbl" style="color: #8E897B;">100% authentic supplements &mdash; batch verified</span>
+  </div>
+
+  <!-- header -->
+  <div style="height: 92px; background: #F7F4ED; border-bottom: 1px solid #DAD4C4; display: flex; align-items: center; padding: 0 64px; gap: 48px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <rect width="34" height="34" rx="4" fill="#121210"/>
+        <rect x="7" y="15" width="20" height="4" rx="1" fill="#CBF43C"/>
+        <rect x="4" y="11" width="5" height="12" rx="1.5" fill="#F7F4ED"/>
+        <rect x="25" y="11" width="5" height="12" rx="1.5" fill="#F7F4ED"/>
+      </svg>
+      <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 26px; letter-spacing: 0.02em;">FITFUEL</span>
+    </div>
+    <div class="nav" style="display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 600;">
+      <a href="#" style="color: #121210; border-bottom: 2px solid #CBF43C; padding-bottom: 3px;">Equipment</a>
+      <a href="#" style="color: #121210;">Supplements</a>
+      <a href="#" style="color: #121210;">Brands</a>
+      <a href="#" style="color: #121210;">Deals</a>
+      <a href="#" style="color: #121210;">Guides</a>
+    </div>
+    <div style="flex-grow: 1; display: flex; align-items: center; gap: 10px; background: #EDE8DB; border: 1px solid #DAD4C4; border-radius: 3px; height: 46px; padding: 0 16px; max-width: 340px;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/>
+      </svg>
+      <span style="font-size: 14px; color: #6F6B5E;">Search whey, racks, dumbbells&hellip;</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/>
+      </svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="3.6"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>
+      </svg>
+      <div style="display: flex; align-items: center; gap: 10px; background: #121210; color: #F7F4ED; height: 46px; padding: 0 18px; border-radius: 3px;">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/>
+          <circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/>
+        </svg>
+        <span style="font-size: 13px; font-weight: 700;">3</span>
+        <span style="font-size: 13px; font-weight: 600; color: #8E897B;">Rs 21,450</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="padding: 26px 64px 0; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6F6B5E;">
+    <a href="#" style="color: #6F6B5E;">Home</a><span>/</span>
+    <a href="#" style="color: #6F6B5E;">Supplements</a><span>/</span>
+    <a href="#" style="color: #6F6B5E;">Protein</a><span>/</span>
+    <span style="color: #121210; font-weight: 600;">Whey Isolate &mdash; Chocolate</span>
+  </div>
+
+  <div style="display: flex; gap: 56px; padding: 30px 64px 0;">
+
+    <!-- gallery -->
+    <div style="width: 660px; flex-shrink: 0; display: flex; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="width: 88px; height: 88px; background: #EDE8DB; border: 2px solid #121210; border-radius: 3px; display: flex; align-items: center; justify-content: center;">
+          <svg width="52" height="52" viewBox="0 0 160 160"><rect x="42" y="46" width="76" height="92" rx="7" fill="#2A2823"/><rect x="36" y="26" width="88" height="22" rx="5" fill="#121210"/><rect x="42" y="74" width="76" height="40" fill="#CBF43C"/></svg>
+        </div>
+        <div style="width: 88px; height: 88px; background: #EDE8DB; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; align-items: center; justify-content: center;">
+          <svg width="52" height="52" viewBox="0 0 160 160"><rect x="42" y="46" width="76" height="92" rx="7" fill="#3A362E"/><rect x="42" y="74" width="76" height="40" fill="#E8642E"/></svg>
+        </div>
+        <div style="width: 88px; height: 88px; background: #EDE8DB; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; align-items: center; justify-content: center;">
+          <svg width="52" height="52" viewBox="0 0 160 160"><circle cx="80" cy="80" r="46" fill="#2A2823"/><path d="M56 80h48M80 56v48" stroke="#CBF43C" stroke-width="8" stroke-linecap="round"/></svg>
+        </div>
+        <div style="width: 88px; height: 88px; background: #EDE8DB; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; align-items: center; justify-content: center;">
+          <svg width="52" height="52" viewBox="0 0 160 160"><rect x="30" y="52" width="100" height="56" rx="6" fill="#2A2823"/><rect x="30" y="52" width="100" height="18" rx="6" fill="#CBF43C"/></svg>
+        </div>
+        <div style="width: 88px; height: 88px; background: #121210; border-radius: 3px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5l10 7-10 7z"/></svg>
+          <span style="font-size: 10px; color: #8E897B; font-weight: 600;">Video</span>
+        </div>
+      </div>
+      <div style="flex-grow: 1; height: 560px; background: #EDE8DB; border: 1px solid #DAD4C4; border-radius: 3px; position: relative; display: flex; align-items: center; justify-content: center;">
+        <span class="lbl" style="position: absolute; top: 18px; left: 18px; background: #CBF43C; color: #121210; padding: 6px 11px; border-radius: 2px;">Best seller</span>
+        <span class="lbl" style="position: absolute; top: 18px; right: 18px; background: #121210; color: #CBF43C; padding: 6px 11px; border-radius: 2px;">Save 13%</span>
+        <svg width="330" height="330" viewBox="0 0 160 160">
+          <rect x="42" y="46" width="76" height="92" rx="7" fill="#2A2823"/>
+          <rect x="36" y="26" width="88" height="22" rx="5" fill="#121210"/>
+          <rect x="42" y="74" width="76" height="42" fill="#CBF43C"/>
+          <rect x="52" y="84" width="44" height="7" rx="3.5" fill="#121210"/>
+          <rect x="52" y="96" width="28" height="7" rx="3.5" fill="#121210"/>
+          <rect x="52" y="122" width="34" height="6" rx="3" fill="#5C5850"/>
+        </svg>
+        <div style="position: absolute; bottom: 18px; left: 50%; margin-left: -46px; display: flex; gap: 6px;">
+          <span style="width: 22px; height: 4px; background: #121210; border-radius: 2px;"></span>
+          <span style="width: 22px; height: 4px; background: #C6BFAC; border-radius: 2px;"></span>
+          <span style="width: 22px; height: 4px; background: #C6BFAC; border-radius: 2px;"></span>
+          <span style="width: 22px; height: 4px; background: #C6BFAC; border-radius: 2px;"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- buy box -->
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span class="lbl" style="color: #E8642E;">Apex Nutrition</span>
+        <span style="width: 3px; height: 3px; border-radius: 50%; background: #C6BFAC;"></span>
+        <span class="lbl" style="color: #6F6B5E;">SKU AP-WPI-2000-CH</span>
+      </div>
+      <h1 style="font-size: 42px; line-height: 1.02;">Whey Isolate 2kg<br>&mdash; Chocolate</h1>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="display: flex; gap: 3px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+        </div>
+        <span style="font-size: 14px; font-weight: 600;">4.9</span>
+        <a href="#" style="font-size: 14px; color: #6F6B5E; border-bottom: 1px solid #C6BFAC;">1,204 reviews</a>
+        <span style="width: 3px; height: 3px; border-radius: 50%; background: #C6BFAC;"></span>
+        <span style="font-size: 14px; color: #6F6B5E;">3,410 sold</span>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 12px; padding-bottom: 20px; border-bottom: 1px solid #DAD4C4;">
+        <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 44px;">Rs 14,750</span>
+        <span style="font-size: 18px; color: #6F6B5E; text-decoration: line-through;">Rs 16,900</span>
+        <span class="lbl" style="background: #CBF43C; color: #121210; padding: 6px 10px; border-radius: 2px;">You save Rs 2,150</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="lbl" style="color: #6F6B5E;">Flavour</span>
+          <span style="font-size: 13px; font-weight: 600;">Chocolate</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <span style="height: 46px; padding: 0 18px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; font-size: 14px; font-weight: 600;">Chocolate</span>
+          <span style="height: 46px; padding: 0 18px; border: 1px solid #C6BFAC; background: #FFFFFF; border-radius: 3px; display: flex; align-items: center; font-size: 14px; font-weight: 600;">Vanilla</span>
+          <span style="height: 46px; padding: 0 18px; border: 1px solid #C6BFAC; background: #FFFFFF; border-radius: 3px; display: flex; align-items: center; font-size: 14px; font-weight: 600;">Cookies &amp; Cream</span>
+          <span style="height: 46px; padding: 0 18px; border: 1px dashed #C6BFAC; border-radius: 3px; display: flex; align-items: center; font-size: 14px; color: #A6A093; text-decoration: line-through;">Strawberry</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="lbl" style="color: #6F6B5E;">Size</span>
+          <span style="font-size: 13px; font-weight: 600;">2kg &middot; 66 servings</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <span style="height: 62px; padding: 0 18px; border: 1px solid #C6BFAC; background: #FFFFFF; border-radius: 3px; display: flex; flex-direction: column; justify-content: center; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">900g</span><span style="font-size: 12px; color: #6F6B5E;">Rs 7,900</span></span>
+          <span style="height: 62px; padding: 0 18px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; flex-direction: column; justify-content: center; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">2kg</span><span style="font-size: 12px; color: #CBF43C;">Rs 14,750 &middot; best value</span></span>
+          <span style="height: 62px; padding: 0 18px; border: 1px solid #C6BFAC; background: #FFFFFF; border-radius: 3px; display: flex; flex-direction: column; justify-content: center; gap: 2px;"><span style="font-size: 14px; font-weight: 700;">4.5kg</span><span style="font-size: 12px; color: #6F6B5E;">Rs 31,200</span></span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; margin-top: 4px;">
+        <div style="width: 140px; height: 58px; border: 1px solid #C6BFAC; background: #FFFFFF; border-radius: 3px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+          <span style="font-size: 17px; font-weight: 700;">1</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div style="flex-grow: 1; height: 58px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+          <span style="font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Add to cart</span>
+        </div>
+        <div style="width: 58px; height: 58px; border: 1px solid #C6BFAC; background: #FFFFFF; border-radius: 3px; display: flex; align-items: center; justify-content: center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg>
+        </div>
+      </div>
+      <div style="height: 58px; background: #CBF43C; color: #121210; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Buy it now</div>
+
+      <div style="background: #EDE8DB; border: 1px solid #DAD4C4; border-radius: 3px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.1 8-7.5 9.5-4.4-1.5-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+          <span style="font-size: 14px; font-weight: 700;">Batch verified</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+          <div style="display: flex; flex-direction: column; gap: 3px;"><span class="lbl" style="color: #6F6B5E;">Batch</span><span style="font-size: 14px; font-weight: 600;">APX-2411-B7</span></div>
+          <div style="display: flex; flex-direction: column; gap: 3px;"><span class="lbl" style="color: #6F6B5E;">Manufactured</span><span style="font-size: 14px; font-weight: 600;">Nov 2025</span></div>
+          <div style="display: flex; flex-direction: column; gap: 3px;"><span class="lbl" style="color: #6F6B5E;">Best before</span><span style="font-size: 14px; font-weight: 600;">Nov 2027</span></div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 11px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#55524A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v10H2z"/><path d="M13 10h4.5l3.5 3.4V17H13z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></svg>
+          <span style="font-size: 14px; color: #55524A;">Free delivery on this order &middot; arrives <strong style="color: #121210;">2&ndash;4 working days</strong></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#55524A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.6-6.4"/><path d="M3 4v5h5"/></svg>
+          <span style="font-size: 14px; color: #55524A;">Sealed returns accepted for 14 days</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E8642E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>
+          <span style="font-size: 14px; color: #55524A;">Only <strong style="color: #E8642E;">7 left</strong> at this price</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- tabs -->
+  <div style="margin-top: 66px; border-top: 1px solid #DAD4C4; border-bottom: 1px solid #DAD4C4;">
+    <div style="padding: 0 64px; display: flex; gap: 36px;">
+      <span style="padding: 20px 0; font-size: 15px; font-weight: 700; border-bottom: 3px solid #121210;">Description</span>
+      <span style="padding: 20px 0; font-size: 15px; font-weight: 600; color: #6F6B5E;">Nutrition &amp; ingredients</span>
+      <span style="padding: 20px 0; font-size: 15px; font-weight: 600; color: #6F6B5E;">Reviews (1,204)</span>
+      <span style="padding: 20px 0; font-size: 15px; font-weight: 600; color: #6F6B5E;">Shipping &amp; returns</span>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 56px; padding: 44px 64px 0;">
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 22px; max-width: 700px;">
+      <h3 style="font-size: 28px;">What it is</h3>
+      <p style="font-size: 16px; line-height: 1.7; color: #35322C;">
+        A cold-filtered whey protein isolate at 27g protein per 30g scoop, with the lactose and fat
+        stripped out rather than masked. It mixes in a shaker with water in about eight seconds and
+        does not foam. If you have had a bad time with concentrates, this is the one to switch to.
+      </p>
+      <p style="font-size: 16px; line-height: 1.7; color: #35322C;">
+        Sweetened with sucralose only &mdash; no maltodextrin, no amino spiking, no proprietary blends.
+        The full amino profile is printed on the tub and repeated in the table alongside.
+      </p>
+      <h3 style="font-size: 22px; margin-top: 10px;">Who it suits</h3>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+          <span style="font-size: 15px; line-height: 1.6; color: #35322C;">Lifters in a cut who need protein without the extra carbs</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+          <span style="font-size: 15px; line-height: 1.6; color: #35322C;">Anyone who bloats on standard whey concentrate</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+          <span style="font-size: 15px; line-height: 1.6; color: #35322C;">Tested athletes &mdash; every batch is screened against the banned list</span>
+        </div>
+      </div>
+      <div style="background: #121210; border-radius: 3px; padding: 26px; display: flex; align-items: center; gap: 22px; margin-top: 12px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 0-3.3 6.9L21 20z"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.2 3.1c-.7.3-.8.9-.8 1.5"/><path d="M12 17h.01"/></svg>
+        <div style="display: flex; flex-direction: column; gap: 5px; flex-grow: 1;">
+          <span style="font-size: 16px; font-weight: 700; color: #F7F4ED;">Not sure isolate is worth the extra?</span>
+          <span style="font-size: 14px; color: #8E897B;">Ask a trainer &mdash; they will tell you if concentrate does the same job for less.</span>
+        </div>
+        <div style="height: 44px; background: #CBF43C; color: #121210; padding: 0 22px; border-radius: 3px; display: flex; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;">Ask now</div>
+      </div>
+    </div>
+
+    <!-- nutrition table -->
+    <div style="width: 460px; flex-shrink: 0; border: 1px solid #DAD4C4; border-radius: 3px; background: #FFFFFF;">
+      <div style="padding: 22px 24px; border-bottom: 1px solid #DAD4C4; display: flex; align-items: center; justify-content: space-between;">
+        <h4 style="font-size: 18px;">Nutrition facts</h4>
+        <span style="font-size: 12px; color: #6F6B5E;">Per 30g scoop</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 15px; font-weight: 600;">Energy</span><span style="font-size: 15px;">118 kcal</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB; background: #FAF8F3;"><span style="font-size: 15px; font-weight: 700;">Protein</span><span style="font-size: 15px; font-weight: 700; color: #E8642E;">27.0 g</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 15px; font-weight: 600;">Carbohydrate</span><span style="font-size: 15px;">1.1 g</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px 15px 40px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 14px; color: #55524A;">of which sugars</span><span style="font-size: 14px; color: #55524A;">0.4 g</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 15px; font-weight: 600;">Fat</span><span style="font-size: 15px;">0.5 g</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 15px; font-weight: 600;">Lactose</span><span style="font-size: 15px;">&lt; 0.1 g</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 15px; font-weight: 600;">BCAA</span><span style="font-size: 15px;">6.2 g</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 24px; border-bottom: 1px solid #EDE8DB;"><span style="font-size: 15px; font-weight: 600;">Leucine</span><span style="font-size: 15px;">2.8 g</span></div>
+      <div style="padding: 20px 24px; background: #EDE8DB;">
+        <span class="lbl" style="color: #6F6B5E; display: block; margin-bottom: 8px;">Ingredients</span>
+        <p style="font-size: 13px; line-height: 1.65; color: #35322C;">Whey protein isolate (milk), cocoa powder, natural and artificial flavouring, sunflower lecithin, sucralose. Contains milk and soy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- reviews -->
+  <div style="padding: 66px 64px 0;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 26px;">
+      <h2 style="font-size: 38px;">Reviews</h2>
+      <div style="height: 46px; border: 1px solid #121210; border-radius: 3px; display: flex; align-items: center; padding: 0 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Write a review</div>
+    </div>
+    <div style="display: flex; gap: 20px;">
+      <div style="width: 300px; flex-shrink: 0; background: #121210; color: #F7F4ED; border-radius: 3px; padding: 28px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: baseline; gap: 8px;">
+          <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 58px; line-height: 1;">4.9</span>
+          <span style="font-size: 17px; color: #8E897B;">/ 5</span>
+        </div>
+        <span style="font-size: 13px; color: #8E897B;">1,204 verified reviews</span>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; color: #8E897B; width: 12px;">5</span><span style="flex-grow: 1; height: 6px; background: #2A2823; border-radius: 3px; overflow: hidden; display: block;"><span style="display: block; width: 91%; height: 6px; background: #CBF43C;"></span></span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; color: #8E897B; width: 12px;">4</span><span style="flex-grow: 1; height: 6px; background: #2A2823; border-radius: 3px; overflow: hidden; display: block;"><span style="display: block; width: 6%; height: 6px; background: #CBF43C;"></span></span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; color: #8E897B; width: 12px;">3</span><span style="flex-grow: 1; height: 6px; background: #2A2823; border-radius: 3px; overflow: hidden; display: block;"><span style="display: block; width: 2%; height: 6px; background: #CBF43C;"></span></span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; color: #8E897B; width: 12px;">2</span><span style="flex-grow: 1; height: 6px; background: #2A2823; border-radius: 3px; overflow: hidden; display: block;"><span style="display: block; width: 1%; height: 6px; background: #CBF43C;"></span></span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; color: #8E897B; width: 12px;">1</span><span style="flex-grow: 1; height: 6px; background: #2A2823; border-radius: 3px; overflow: hidden; display: block;"><span style="display: block; width: 1%; height: 6px; background: #CBF43C;"></span></span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px; padding-top: 16px; border-top: 1px solid #2A2823;">
+          <span class="lbl" style="color: #CBF43C;">Mentioned most</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+            <span style="font-size: 12px; border: 1px solid #2A2823; color: #C4BFB1; padding: 6px 10px; border-radius: 2px;">mixes well (312)</span>
+            <span style="font-size: 12px; border: 1px solid #2A2823; color: #C4BFB1; padding: 6px 10px; border-radius: 2px;">no bloating (240)</span>
+            <span style="font-size: 12px; border: 1px solid #2A2823; color: #C4BFB1; padding: 6px 10px; border-radius: 2px;">taste (198)</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 38px; height: 38px; border-radius: 50%; background: #EDE8DB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">DP</div>
+              <div style="display: flex; flex-direction: column;">
+                <span style="font-size: 14px; font-weight: 700;">[REVIEWER NAME]</span>
+                <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6F6B5E;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                  Verified purchase &middot; 2kg Chocolate</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 3px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+            </div>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: #35322C;">&ldquo;Third tub. Mixes clean in a shaker, no clumps at the bottom, and the chocolate is not sickly. The batch date being on the listing is what keeps me ordering here instead of the marketplace sellers.&rdquo;</p>
+          <div style="display: flex; align-items: center; gap: 16px; padding-top: 4px;">
+            <span style="font-size: 13px; color: #6F6B5E;">Was this helpful?</span>
+            <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10l5-7 1.5 1.2L12 9h6.5a2 2 0 0 1 2 2.4l-1.6 8A2 2 0 0 1 17 21z"/></svg>
+              84</span>
+            <span style="font-size: 13px; color: #6F6B5E;">Report</span>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 38px; height: 38px; border-radius: 50%; background: #EDE8DB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">MK</div>
+              <div style="display: flex; flex-direction: column;">
+                <span style="font-size: 14px; font-weight: 700;">[REVIEWER NAME]</span>
+                <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6F6B5E;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                  Verified purchase &middot; 900g Vanilla</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 3px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#DAD4C4"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+            </div>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: #35322C;">&ldquo;Good protein, honest label. Docking a star only because the 900g tub scoop was buried at the bottom. Delivery took three days to Kandy.&rdquo;</p>
+          <div style="display: flex; align-items: center; gap: 16px; padding-top: 4px;">
+            <span style="font-size: 13px; color: #6F6B5E;">Was this helpful?</span>
+            <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121210" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10l5-7 1.5 1.2L12 9h6.5a2 2 0 0 1 2 2.4l-1.6 8A2 2 0 0 1 17 21z"/></svg>
+              31</span>
+            <span style="font-size: 13px; color: #6F6B5E;">Report</span>
+          </div>
+        </div>
+        <div style="height: 50px; border: 1px solid #C6BFAC; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Load 12 more reviews</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- related -->
+  <div style="padding: 70px 64px 0;">
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px;">
+      <span class="lbl" style="color: #6F6B5E;">Bought together most often</span>
+      <h2 style="font-size: 38px;">Complete the stack</h2>
+    </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+        <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; flex-direction: column;">
+          <div style="height: 236px; background: #EDE8DB; border-bottom: 1px solid #DAD4C4; position: relative; display: flex; align-items: center; justify-content: center;">
+            
+            <span style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; background: #F7F4ED; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg></span>
+            <svg width="132" height="132" viewBox="0 0 160 160"><rect x="52" y="30" width="56" height="18" rx="4" fill="#121210"/><path d="M50 50h60v72a14 14 0 0 1-14 14H64a14 14 0 0 1-14-14z" fill="#2A2823"/><rect x="50" y="92" width="60" height="30" fill="#E8642E"/><path d="M60 106h14M84 100l8 12" stroke="#F7F4ED" stroke-width="4" stroke-linecap="round"/></svg>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span class="lbl" style="color: #6F6B5E;">Voltage Labs &middot; 300g</span>
+            <h4 style="font-size: 17px; line-height: 1.2;">Pre-Workout V2 &mdash; Citrus</h4>
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <span style="font-size: 13px; font-weight: 600;">4.6</span>
+              <span style="font-size: 13px; color: #6F6B5E;">(587)</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 9px; margin-top: 2px;">
+              <span style="font-size: 21px; font-weight: 700;">Rs 9,300</span>
+              
+            </div>
+            <div style="margin-top: 8px; height: 46px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 9px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Add to cart</span>
+            </div>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; flex-direction: column;">
+          <div style="height: 236px; background: #EDE8DB; border-bottom: 1px solid #DAD4C4; position: relative; display: flex; align-items: center; justify-content: center;">
+            <span class="lbl" style="position: absolute; top: 14px; left: 14px; background: #CBF43C; color: #121210; padding: 5px 9px; border-radius: 2px;">Best seller</span>
+            <span style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; background: #F7F4ED; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg></span>
+            <svg width="132" height="132" viewBox="0 0 160 160"><rect x="56" y="34" width="48" height="16" rx="4" fill="#121210"/><rect x="48" y="50" width="64" height="80" rx="8" fill="#2A2823"/><rect x="48" y="78" width="64" height="28" fill="#CBF43C"/><rect x="58" y="88" width="30" height="6" rx="3" fill="#121210"/></svg>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span class="lbl" style="color: #6F6B5E;">Apex Nutrition &middot; 500g</span>
+            <h4 style="font-size: 17px; line-height: 1.2;">Creatine Monohydrate</h4>
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <span style="font-size: 13px; font-weight: 600;">4.8</span>
+              <span style="font-size: 13px; color: #6F6B5E;">(903)</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 9px; margin-top: 2px;">
+              <span style="font-size: 21px; font-weight: 700;">Rs 6,450</span>
+              
+            </div>
+            <div style="margin-top: 8px; height: 46px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 9px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Add to cart</span>
+            </div>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; flex-direction: column;">
+          <div style="height: 236px; background: #EDE8DB; border-bottom: 1px solid #DAD4C4; position: relative; display: flex; align-items: center; justify-content: center;">
+            
+            <span style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; background: #F7F4ED; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg></span>
+            <svg width="132" height="132" viewBox="0 0 160 160"><rect x="62" y="28" width="36" height="18" rx="4" fill="#121210"/><rect x="52" y="46" width="56" height="86" rx="9" fill="#2A2823"/><rect x="52" y="74" width="56" height="32" fill="#E8642E"/><circle cx="80" cy="90" r="8" fill="#F7F4ED"/></svg>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span class="lbl" style="color: #6F6B5E;">Vitalis &middot; 120 caps</span>
+            <h4 style="font-size: 17px; line-height: 1.2;">Omega-3 + D3 Complex</h4>
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <span style="font-size: 13px; font-weight: 600;">4.7</span>
+              <span style="font-size: 13px; color: #6F6B5E;">(341)</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 9px; margin-top: 2px;">
+              <span style="font-size: 21px; font-weight: 700;">Rs 5,200</span>
+              <span style="font-size: 14px; color: #6F6B5E; text-decoration: line-through;">Rs 5,900</span>
+            </div>
+            <div style="margin-top: 8px; height: 46px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 9px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Add to cart</span>
+            </div>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #DAD4C4; border-radius: 3px; display: flex; flex-direction: column;">
+          <div style="height: 236px; background: #EDE8DB; border-bottom: 1px solid #DAD4C4; position: relative; display: flex; align-items: center; justify-content: center;">
+            
+            <span style="position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; background: #F7F4ED; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F6B5E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0 5-8.5 10.5-8.5 10.5S3.5 13.5 3.5 8.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2z"/></svg></span>
+            <svg width="132" height="132" viewBox="0 0 160 160"><rect x="26" y="60" width="108" height="40" rx="8" fill="#2A2823"/><rect x="26" y="60" width="108" height="16" rx="8" fill="#E8642E"/><rect x="44" y="84" width="40" height="6" rx="3" fill="#CBF43C"/></svg>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span class="lbl" style="color: #6F6B5E;">Apex Nutrition &middot; 12 pack</span>
+            <h4 style="font-size: 17px; line-height: 1.2;">Protein Bar &mdash; Peanut</h4>
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#E8642E"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg>
+              <span style="font-size: 13px; font-weight: 600;">4.5</span>
+              <span style="font-size: 13px; color: #6F6B5E;">(176)</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 9px; margin-top: 2px;">
+              <span style="font-size: 21px; font-weight: 700;">Rs 4,100</span>
+              
+            </div>
+            <div style="margin-top: 8px; height: 46px; background: #121210; color: #F7F4ED; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 9px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CBF43C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Add to cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div style="height: 78px;"></div>
+  <!-- footer -->
+  <div style="margin-top: 78px; background: #121210; color: #F7F4ED; padding: 60px 64px 34px;">
+    <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid #2A2823;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+            <rect width="34" height="34" rx="4" fill="#CBF43C"/>
+            <rect x="7" y="15" width="20" height="4" rx="1" fill="#121210"/>
+            <rect x="4" y="11" width="5" height="12" rx="1.5" fill="#121210"/>
+            <rect x="25" y="11" width="5" height="12" rx="1.5" fill="#121210"/>
+          </svg>
+          <span style="font-family: 'Anton', 'Arial Narrow', Impact, sans-serif; font-size: 24px;">FITFUEL</span>
+        </div>
+        <p style="font-size: 14px; line-height: 1.65; color: #8E897B; max-width: 290px;">Fitness equipment and supplements in one store. [COMPANY ADDRESS] &middot; [PHONE] &middot; [SUPPORT EMAIL]</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="lbl" style="color: #CBF43C;">Equipment</span>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Dumbbells</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Racks &amp; rigs</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Benches</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Cardio</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Accessories</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="lbl" style="color: #CBF43C;">Supplements</span>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Protein</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Pre-workout</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Creatine</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Vitamins</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Recovery</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="lbl" style="color: #CBF43C;">Support</span>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Track order</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Shipping</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Returns</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Warranty</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Contact</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="lbl" style="color: #CBF43C;">Company</span>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">About</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Stores</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Careers</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Privacy</a>
+        <a href="#" style="font-size: 14px; color: #C4BFB1;">Terms</a>
+      </div>
+    </div>
+    <div style="padding-top: 26px; display: flex; align-items: center; justify-content: space-between;">
+      <span style="font-size: 13px; color: #6F6B5E;">&copy; 2026 FitFuel. All rights reserved.</span>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 13px; color: #6F6B5E; margin-right: 6px;">We accept</span>
+        <div style="width: 46px; height: 30px; border: 1px solid #2A2823; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #8E897B; letter-spacing: 0.06em;">VISA</div>
+        <div style="width: 46px; height: 30px; border: 1px solid #2A2823; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #8E897B; letter-spacing: 0.06em;">MC</div>
+        <div style="width: 46px; height: 30px; border: 1px solid #2A2823; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #8E897B; letter-spacing: 0.06em;">AMEX</div>
+        <div style="width: 46px; height: 30px; border: 1px solid #2A2823; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #8E897B; letter-spacing: 0.06em;">COD</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":3600}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
