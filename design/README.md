@@ -1,61 +1,62 @@
 # FitFuel — design canvas
 
-Design source for **FitFuel**, a fitness equipment & supplement e-commerce platform.
-Eleven artboards on one pan/zoom canvas, published as a Design artifact.
+Rebuild of the **FITFUEL** Figma file (`MYAtwlTgmNco4YE6eOwshE`, node `1:18507` — "Home Page",
+1463 × 10102), with **Fitness Equipment** added into the same design system.
 
-## Files
+Read from Figma via the Figma MCP connection: published variables, the header component's
+code, and the Product Card component's exact spec.
+
+## Artboards
 
 | File | Artboard | Size |
 |---|---|---|
-| `Main.dc.html` | Home | 1440 × 5000 |
-| `Shop.dc.html` | Equipment listing (filters + 3-up grid) | 1440 × 2960 |
-| `Product.dc.html` | Supplement product detail | 1440 × 3600 |
-| `EquipmentProduct.dc.html` | Equipment product detail (specs, freight, warranty) | 1440 × 3300 |
-| `Cart.dc.html` | Cart | 1440 × 1990 |
-| `Checkout.dc.html` | Checkout | 1440 × 2500 |
-| `Auth.dc.html` | Log in / register | 1440 × 900 |
-| `Account.dc.html` | My account | 1440 × 2100 |
-| `Admin.dc.html` | Admin dashboard | 1440 × 1240 |
-| `MobileHome.dc.html` | Mobile home | 390 × 1900 |
-| `MobileProduct.dc.html` | Mobile product | 390 × 1560 |
-| `System.dc.html` | Design system | 1280 × 2560 |
+| `Main.dc.html` | Home Page — Figma rebuild + equipment | 1463 × 10600 |
+| `Equipment.dc.html` | Fitness Equipment category page (new) | 1463 × 3900 |
+| `System.dc.html` | Design tokens | 1280 × 2150 |
 
-`canvas.json` lays the artboards out across four pages: Storefront, Buy flow &
-account, Admin & mobile, Design system.
+## Tokens — read from the Figma file, not invented
 
-## Design tokens
+| Token | Value |
+|---|---|
+| Brand/500 · 600 · 700 | `#29ABE2` · `#198ABA` · `#126588` |
+| Brand/400 · 100 · 50 | `#5ABEE9` · `#D5E6FB` · `#F9F5FF` |
+| background / Accent | `#333333` / `#212121` |
+| Gray 900→50 | `#181D27` `#404040` `#535862` `#737373` `#A3A3A3` `#D5D7DA` `#E9EAEB` `#F5F5F5` `#FAFAFA` |
+| Success 500 · 700 · 100 | `#12B76A` · `#027A48` · `#D1FADF` |
+| Warning/400 | `#FDB022` (rating stars) |
+| Display face | **MuseoModerno** 500 / 600 |
+| Text face | **Albert Sans** 400 / 500 / 600 |
+| Corner/Medium | `12px` (buttons 8, product card 28, badge 16) |
+| Shadow/xs | `0 1px 2px rgba(10,13,18,0.05)` |
+| Display max width | `1280px` |
 
-| Token | Value | Use |
-|---|---|---|
-| Ink | `#121210` | Dark surfaces, primary text |
-| Ink soft | `#2A2823` | Dividers on dark |
-| Volt | `#CBF43C` | Primary accent (equipment) |
-| Ember | `#E8642E` | Supplements, offers, ratings |
-| Paper | `#F7F4ED` | Page background |
-| Paper 2 | `#EDE8DB` | Media wells |
-| Line | `#DAD4C4` | Hairlines |
-| Muted | `#6F6B5E` | Secondary text |
-| Good / Warning / Critical / Neutral | `#4C8B2B` / `#E8642E` / `#B3311A` / `#A6A093` | Status — always with an icon and a word |
+## Home page sections (Figma order preserved)
 
-Type: **Anton** for headings (uppercase only), **Instrument Sans** for body and UI.
-Radius 3px on surfaces, 2px on badges. No drop shadows. All sibling groups use
-flex/grid with `gap`.
+Header → hero carousel → protein partners → Best Deals slider → **equipment categories** →
+features (dark) → promo grid → **Top Fitness Equipment slider** → banner → brand strip →
+Recommended slider → Instant Assistance → metrics → FAQ → footer.
+
+## Where Fitness Equipment was added
+
+1. `Equipment` item in the header navigation bar
+2. `Shop Fitness Equipment` — six category tiles
+3. `Top Fitness Equipment` — product slider using the same card component
+4. Equipment mixed into `Recommended For You`
+5. `Equipment.dc.html` — full category page (filters, grid, freight / assembly / warranty / instalments strip)
+
+## Known gap
+
+Product photography and brand logos in the Figma file are linked assets on `figma.com`,
+which this environment cannot download (egress policy). Every product image here is drawn
+as **inline SVG** in the right shape, colour and proportion. Swap in the real photos when
+you build the site.
 
 ## Rebuilding
 
-`compose.sh` assembles a page from a `_b_*.html` body fragment plus the shared
-`_helmet.html`, `_header.html` and `_footer.html`; `gencard.sh` emits product cards
-from the SVG illustration library.
+`compose.sh` wraps a `_b_*.html` body fragment with `_helmet.html`; `gencard.sh` emits the
+Product Card component. Then re-seed with the Design `seed-canvas.mjs` helper and
+republish `fitfuel-ecommerce-design.html`.
 
 ```bash
-./compose.sh Shop.dc.html 1440 2960 _b_shop.html
+./compose.sh Equipment.dc.html 1463 3900 _b_equip.html
 ```
-
-Then re-seed the canvas with the Design `seed-canvas.mjs` helper, passing every
-`.dc.html` plus `canvas.json`, and republish `fitfuel-ecommerce-design.html`.
-
-## Placeholders
-
-Bracketed values (`[CUSTOMER NAME]`, `[STORE ADDRESS]`, `[PHONE]`, `[SUPPORT EMAIL]`,
-`[YOUR EMAIL]`) are deliberate — fill them with real details. Prices are sample values
-in LKR.
