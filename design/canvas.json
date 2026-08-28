@@ -19,7 +19,7 @@
     { "file": "MobileHome.dc.html",    "page": "page-3", "x": 1560, "y": 0, "w": 390,  "h": 1900, "title": "Mobile home" },
     { "file": "MobileProduct.dc.html", "page": "page-3", "x": 2070, "y": 0, "w": 390,  "h": 1560, "title": "Mobile product" },
 
-    { "file": "System.dc.html",   "page": "page-4", "x": 0, "y": 0, "w": 1280, "h": 2560, "title": "Design system" }
+    { "file": "System.dc.html",   "page": "page-4", "x": 0, "y": 0, "w": 1280, "h": 2700, "title": "Design system" }
   ],
   "annotations": [
     { "id": "note-storefront", "page": "page-1", "x": 0,    "y": -150, "w": 640, "text": "STOREFRONT — desktop 1440.\nHome carries both shelves: equipment in graphite + volt, supplements in ember. Listing and product detail follow the same 4-up card grid." },
