@@ -71,7 +71,7 @@ republish `fitfuel-ecommerce-design.html`.
 | `export/fitfuel-equipment.html` | Fitness Equipment page |
 | `export/fitfuel-tokens.html` | Design tokens |
 
-**Route A — Figma MCP (editable layers, best).** Reconnect the Figma MCP server to push the design in; it writes real frames, auto-layout and text nodes.
+**Route A — Figma plugin (editable layers, best).** Use the Figma plugin to push the design in; it writes real frames, auto-layout and text nodes.
 
 **Route B — html.to.design browser extension (editable layers).** Install the plugin +
 extension, open one of the files above in the browser, run the extension, import into Figma.

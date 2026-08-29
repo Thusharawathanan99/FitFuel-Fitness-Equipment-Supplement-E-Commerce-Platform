@@ -89,7 +89,7 @@ and every card, gallery and cart row picks them up automatically.
 
 ## Other directories
 
-- `design/` — the design canvas source and standalone HTML exports.
+- `design/` — Design canvas source and standalone HTML exports.
 - `app/` — the earlier single-file hash-routed prototype.
 - `figma-plugin/` — a local Figma plugin that builds the prototype screens and
   wires the click-through inside Figma.
