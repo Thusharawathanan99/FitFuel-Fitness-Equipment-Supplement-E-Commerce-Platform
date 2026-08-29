@@ -6,7 +6,7 @@ A functioning single-page store built on the FITFUEL Figma design system
 | File | Use |
 |---|---|
 | `index.html` | **Deployable page.** Open it directly or drop it on any static host. |
-| `fitfuel.html` | Same page as an Artifact body (no `<!doctype>` / `<html>` / `<body>` wrapper). |
+| `fitfuel.html` | Same page as a standalone body fragment (no `<!doctype>` / `<html>` / `<body>` wrapper). |
 
 No build step, no dependencies. Fonts come from Google Fonts; everything else ships in the file.
 

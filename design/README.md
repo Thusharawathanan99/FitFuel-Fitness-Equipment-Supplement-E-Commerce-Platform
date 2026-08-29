@@ -3,7 +3,7 @@
 Rebuild of the **FITFUEL** Figma file (`MYAtwlTgmNco4YE6eOwshE`, node `1:18507` — "Home Page",
 1463 × 10102), with **Fitness Equipment** added into the same design system.
 
-Read from Figma via the Figma MCP connection: published variables, the header component's
+Read directly from Figma: published variables, the header component's
 code, and the Product Card component's exact spec.
 
 ## Artboards
@@ -54,8 +54,7 @@ you build the site.
 ## Rebuilding
 
 `compose.sh` wraps a `_b_*.html` body fragment with `_helmet.html`; `gencard.sh` emits the
-Product Card component. Then re-seed with the `seed-canvas.mjs` helper and
-republish `fitfuel-ecommerce-design.html`.
+Product Card component.
 
 ```bash
 ./compose.sh Equipment.dc.html 1463 3900 _b_equip.html
@@ -63,7 +62,7 @@ republish `fitfuel-ecommerce-design.html`.
 
 ## Getting this into Figma
 
-`design/export/` holds standalone HTML — no canvas runtime, just the page:
+`design/export/` holds standalone HTML — no extra runtime, just the clean page:
 
 | File | Page |
 |---|---|
@@ -76,7 +75,7 @@ republish `fitfuel-ecommerce-design.html`.
 **Route B — html.to.design browser extension (editable layers).** Install the plugin +
 extension, open one of the files above in the browser, run the extension, import into Figma.
 
-**Route C — PNG / PDF (flat image).** Open the published canvas, Export → PNG or PDF, then
+**Route C — PNG / PDF (flat image).** Open the export files in browser, print to PDF, then
 place the image in Figma as a reference layer. Not editable.
 
 Fonts to install in Figma either way: **MuseoModerno** and **Albert Sans** (both on Google Fonts).

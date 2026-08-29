@@ -3,7 +3,7 @@
 Run this once inside the FitFuel Figma file. It builds the four missing screens and
 wires every prototype connection, so pressing ▶ walks the whole shopping flow.
 
-It needs no account upgrade and no MCP quota — it runs locally in your Figma.
+It runs locally in your Figma.
 
 ## What it does
 
