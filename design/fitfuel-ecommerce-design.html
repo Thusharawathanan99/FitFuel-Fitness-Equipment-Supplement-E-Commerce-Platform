@@ -4,17 +4,9 @@
 <meta charset="utf-8">
 <title>FitFuel Store Design</title>
 <!-- README
-This page is a design canvas published from the editor — an early preview of
-the Design canvas editor, packaged to run as a published artifact page.
-The editor code AND the design content live in this one file: the content is
-the "files" record inside the script block with id "appifact-doc" (one
-.dc.html source per artboard, entry file Main.dc.html, plus canvas.json for
-the layout) together with the title. Edits stay local until a
-viewer with write access hits Save, which republishes the whole page as a new
-immutable version through the artifact runtime's publish capability (the
-appifact-capabilities meta records the declaration the page was built for).
+This page is a design canvas preview.
 -->
-<meta name="README" content="Design canvas (FitFuel Store Design) published from the editor. Its entire editable state (the .dc.html artboards, canvas.json, title) lives in this file, in the script block with id appifact-doc; saving republishes the whole page. See the README comment at the top of head.">
+<meta name="README" content="Design canvas (FitFuel Store Design).">
 <meta name="appifact-capabilities" content="{&quot;self&quot;:{},&quot;downloads&quot;:{}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style id="appifact-style">
@@ -384,9 +376,7 @@ html {
 }
 
 iframe {
-  /* The host page (claude.ai's artifact wrapper) ships a CSS reset that can
-     hide src-less iframes; the canvas preview is srcDoc-only, so it
-     disappeared. Keep every iframe explicitly block so preview frames
+  /* Keep every iframe explicitly block so preview frames
      always paint regardless of the embedding page's resets. */
   display: block;
   /* :root sets `color-scheme` so native UI tracks the app theme, but it's

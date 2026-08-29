@@ -1,0 +1,152 @@
+/* Component styles that mirror the Figma components exactly. */
+
+/* ---------- Product card (Figma: Product Card, 28px radius, diagonal dark panel) ---------- */
+.ff-card {
+  position: relative; display: flex; flex-direction: column; background: #fff;
+  border: 1px solid var(--ff-dark); border-radius: var(--ff-r-card); overflow: hidden;
+  transition: transform 0.18s var(--ff-ease), box-shadow 0.18s var(--ff-ease);
+}
+.ff-card:hover { transform: translateY(-4px); box-shadow: var(--ff-shadow-md); }
+.ff-card-art { aspect-ratio: 1; display: grid; place-items: center; padding: 26px; background: #fff; }
+.ff-card-art svg { max-height: 210px; width: auto; }
+.ff-card-body {
+  position: relative; margin-top: -44px; min-height: 258px; background: var(--ff-dark);
+  color: #fff; padding: 60px 18px 18px; display: flex; flex-direction: column;
+  justify-content: space-between; gap: 14px;
+  clip-path: polygon(0 17%, 100% 7%, 100% 100%, 0 100%);
+}
+.ff-card-title {
+  font-family: var(--ff-display); font-weight: 500; font-size: 21px; line-height: 1.28;
+  letter-spacing: -0.02em; color: #fff; padding-right: 26px; display: block;
+}
+.ff-card-title:hover { color: var(--ff-brand-400); }
+.ff-card-price { font-family: var(--ff-display); font-weight: 600; font-size: 24px;
+  color: var(--ff-brand-500); white-space: nowrap; }
+.ff-card-was { font-family: var(--ff-display); font-weight: 500; font-size: 16px;
+  color: var(--ff-gray-500); text-decoration: line-through; white-space: nowrap; }
+.ff-card-acts { display: flex; gap: 8px; }
+.ff-card-acts .ff-btn { flex: 1; }
+.ff-card-mini { width: 48px; height: 48px; flex-shrink: 0; display: grid; place-items: center;
+  background: var(--ff-gray-50); border: 1px solid var(--ff-gray-50); border-radius: var(--ff-r);
+  box-shadow: var(--ff-shadow); cursor: pointer; transition: background var(--ff-fast) var(--ff-ease); }
+.ff-card-mini:hover { background: var(--ff-brand-100); }
+.ff-card-flag { position: absolute; top: 18px; left: 18px; z-index: 2; background: var(--ff-brand-500);
+  color: #fff; padding: 5px 10px; border-radius: var(--ff-r-pill); font-size: 11px; font-weight: 600; }
+.ff-card-heart { position: absolute; top: 18px; right: 18px; z-index: 2; width: 44px; height: 44px;
+  border-radius: 50%; background: #fff; border: 1px solid var(--ff-gray-300); display: grid;
+  place-items: center; box-shadow: var(--ff-shadow); cursor: pointer;
+  transition: border-color var(--ff-fast) var(--ff-ease); }
+.ff-card-heart:hover { border-color: var(--ff-brand-500); }
+.ff-card-heart.is-on svg { fill: #E8642E; stroke: #E8642E; }
+.ff-card-veg { position: absolute; top: 30px; right: 18px; width: 17px; height: 17px;
+  border: 1.25px solid var(--ff-success-500); display: grid; place-items: center; }
+.ff-card-veg i { width: 8.75px; height: 8.75px; border-radius: 50%; background: var(--ff-success-500); display: block; }
+
+/* ---------- Category tile ---------- */
+.ff-tile { background: #fff; border: 1px solid var(--ff-gray-200); border-radius: var(--ff-r);
+  box-shadow: var(--ff-shadow); padding: 20px 14px; display: flex; flex-direction: column;
+  align-items: center; gap: 12px; text-align: center; color: inherit;
+  transition: border-color var(--ff-fast) var(--ff-ease), transform var(--ff-fast) var(--ff-ease); }
+.ff-tile:hover { border-color: var(--ff-brand-500); transform: translateY(-3px); color: inherit; }
+.ff-tile svg { max-height: 52px; width: auto; }
+.ff-tile b { font-family: var(--ff-display); font-weight: 600; font-size: 16px; }
+.ff-tile span { font-size: 13px; color: var(--ff-gray-500); }
+
+/* ---------- Header ---------- */
+.ff-ann { background: var(--ff-brand-500); color: #fff; text-align: center; padding: 3px 12px;
+  font-family: var(--ff-display); font-weight: 500; font-size: 16px; line-height: 32px; }
+.ff-hdr { position: sticky; top: 0; z-index: 60; background: #fff;
+  border-bottom: 1px solid var(--ff-gray-100); box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+.ff-hdr-main { display: flex; align-items: center; gap: 24px; padding: 16px 0; }
+.ff-brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; color: inherit; }
+.ff-brand:hover { color: inherit; }
+.ff-brand-name { font-family: var(--ff-display); font-weight: 600; font-size: 22px;
+  line-height: 24px; color: var(--ff-accent); display: block; }
+.ff-brand-sub { font-size: 10px; font-weight: 500; color: var(--ff-gray-500); }
+.ff-searchbar { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; height: 44px;
+  padding: 0 14px; background: #fff; border: 1px solid var(--ff-gray-300);
+  border-radius: var(--ff-r-sm); box-shadow: var(--ff-shadow); }
+.ff-searchbar:focus-within { border-color: var(--ff-brand-500); box-shadow: 0 0 0 3px var(--ff-brand-50); }
+.ff-searchbar input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font-size: 16px; }
+.ff-count { position: absolute; top: -5px; right: -5px; min-width: 19px; height: 19px; padding: 0 5px;
+  border-radius: 10px; background: #E8642E; color: #fff; font-size: 11px; font-weight: 700;
+  display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.ff-nav { display: flex; align-items: center; gap: 6px; padding: 4px 0 10px;
+  overflow-x: auto; scrollbar-width: none; }
+.ff-nav::-webkit-scrollbar { display: none; }
+.ff-nav a { display: flex; align-items: center; gap: 9px; padding: 8px 12px; border-radius: var(--ff-r);
+  font-size: 14px; font-weight: 600; color: var(--ff-gray-600); white-space: nowrap;
+  transition: background var(--ff-fast) var(--ff-ease), color var(--ff-fast) var(--ff-ease); }
+.ff-nav a:hover { background: var(--ff-gray-50); color: var(--ff-brand-700); }
+.ff-nav a.is-active { background: var(--ff-brand-100); color: var(--ff-brand-700); }
+
+/* ---------- Footer ---------- */
+.ff-ftr { background: #fff; border-top: 1px solid var(--ff-gray-200); padding: 48px 0 28px; margin-top: 8px; }
+.ff-fcols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) 1.2fr; gap: 32px; }
+.ff-fcol { display: flex; flex-direction: column; gap: 12px; }
+.ff-fcol h4 { font-size: 14px; font-weight: 600; color: var(--ff-gray-500); font-family: var(--ff-body); }
+.ff-fcol a { font-size: 14px; color: var(--ff-gray-900); }
+.ff-fcol a:hover { color: var(--ff-brand-500); }
+
+/* ---------- Listing layout ---------- */
+.ff-layout { display: grid; grid-template-columns: 268px minmax(0, 1fr); gap: 32px; align-items: start; }
+.ff-filters { position: sticky; top: 150px; display: flex; flex-direction: column; gap: 22px; }
+.ff-fgroup { display: flex; flex-direction: column; gap: 12px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--ff-gray-200); }
+.ff-fgroup h4 { font-size: 14px; font-weight: 600; color: var(--ff-gray-500); font-family: var(--ff-body); }
+.ff-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  flex-wrap: wrap; padding-bottom: 18px; border-bottom: 1px solid var(--ff-gray-200); margin-bottom: 24px; }
+
+/* ---------- Cart / order rows ---------- */
+.ff-line { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 20px;
+  align-items: center; padding: 20px 0; border-bottom: 1px solid var(--ff-gray-200); }
+.ff-line-art { width: 96px; height: 96px; border-radius: var(--ff-r); background: var(--ff-gray-50);
+  border: 1px solid var(--ff-gray-200); display: grid; place-items: center; padding: 10px; }
+.ff-line-art svg { max-height: 74px; width: auto; }
+.ff-sumrow { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 9px 0; font-size: 15px; }
+.ff-sumrow.is-total { border-top: 1px solid var(--ff-gray-200); margin-top: 8px; padding-top: 18px; }
+.ff-sumrow.is-total b { font-family: var(--ff-display); font-size: 30px; font-weight: 600; }
+
+/* ---------- Steps ---------- */
+.ff-steps { display: flex; align-items: center; gap: 12px; padding: 8px 0 26px; flex-wrap: wrap; }
+.ff-step { display: flex; align-items: center; gap: 10px; font-size: 14px;
+  color: var(--ff-gray-500); white-space: nowrap; }
+.ff-step i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--ff-gray-300);
+  display: grid; place-items: center; font-size: 13px; font-weight: 700; font-style: normal; }
+.ff-step.is-on { color: var(--ff-gray-900); font-weight: 700; }
+.ff-step.is-on i { background: var(--ff-dark); color: #fff; border-color: var(--ff-dark); }
+.ff-step.is-done i { background: var(--ff-brand-500); color: #fff; border-color: var(--ff-brand-500); }
+.ff-step-line { flex: 1; height: 1px; background: var(--ff-gray-200); min-width: 14px; }
+
+/* ---------- Admin ---------- */
+.ff-admin { display: grid; grid-template-columns: 252px minmax(0, 1fr); min-height: 100vh; }
+.ff-aside { background: var(--ff-dark); padding: 26px 18px; display: flex; flex-direction: column; gap: 6px; }
+.ff-aside a { display: flex; align-items: center; gap: 12px; padding: 0 14px; height: 44px;
+  border-radius: var(--ff-r-sm); font-size: 14px; color: #C4BFB1; }
+.ff-aside a:hover { background: #26241E; color: #fff; }
+.ff-aside a.is-active { background: #26241E; color: #fff; font-weight: 700; }
+.ff-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ff-table th { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ff-gray-500); padding: 13px 16px;
+  background: var(--ff-gray-50); border-bottom: 1px solid var(--ff-gray-200); white-space: nowrap; }
+.ff-table td { padding: 16px; border-bottom: 1px solid var(--ff-gray-200); vertical-align: middle; }
+.ff-table tr:last-child td { border-bottom: 0; }
+.ff-table-wrap { overflow-x: auto; border: 1px solid var(--ff-gray-200);
+  border-radius: var(--ff-r); background: #fff; box-shadow: var(--ff-shadow); }
+
+@media (max-width: 1080px) {
+  .ff-layout { grid-template-columns: 1fr; }
+  .ff-filters { position: static; }
+  .ff-fcols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ff-admin { grid-template-columns: 1fr; }
+  .ff-aside { flex-direction: row; overflow-x: auto; padding: 12px; }
+  .ff-aside a { white-space: nowrap; }
+}
+@media (max-width: 680px) {
+  .ff-hdr-main { flex-wrap: wrap; gap: 12px; }
+  .ff-searchbar { order: 3; flex-basis: 100%; }
+  .ff-line { grid-template-columns: 72px minmax(0, 1fr); }
+  .ff-line-art { width: 72px; height: 72px; }
+  .ff-fcols { grid-template-columns: 1fr; }
+}
