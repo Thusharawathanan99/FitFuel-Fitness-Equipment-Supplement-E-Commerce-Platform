@@ -1,0 +1,9 @@
+{
+  "name": "FitFuel Prototype Builder",
+  "id": "fitfuel-prototype-builder",
+  "api": "1.0.0",
+  "main": "code.js",
+  "documentAccess": "dynamic-page",
+  "editorType": ["figma"],
+  "networkAccess": { "allowedDomains": ["none"] }
+}
