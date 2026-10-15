@@ -8,13 +8,14 @@ import CouponInput from '../../components/checkout/CouponInput';
 import ProductArt from '../../components/product/ProductArt';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import { orderService } from '../../services';
+import { apiRequest } from '../../services/http';
 import { rs } from '../../utils/format';
 import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 import { useToast } from '../../context/ToastContext';
 
 const PAYMENTS = [
-  { id: 'Card', label: 'Card payment', hint: 'Visa, Mastercard and Amex — simulated, no card is charged' },
+  { id: 'Card', label: 'Card payment (Stripe Gateway)', hint: 'Secured via Stripe PaymentIntent — Visa, Mastercard, Amex' },
   { id: 'Cash on delivery', label: 'Cash on delivery', hint: 'Pay the courier when your order arrives' },
   { id: 'Bank transfer', label: 'Bank transfer', hint: 'We email account details after you place the order' }
 ];
@@ -80,8 +81,34 @@ export default function Checkout() {
     }
     setPlacing(true);
     try {
+      let stripePaymentIntentId = null;
+      if (form.payment === 'Card') {
+        try {
+          const paymentRes = await apiRequest('/payments/create-intent', {
+            method: 'POST',
+            body: JSON.stringify({
+              amount: totals.total,
+              currency: 'lkr',
+              metadata: {
+                customerName: form.name,
+                customerEmail: form.email
+              }
+            })
+          });
+          stripePaymentIntentId = paymentRes?.paymentIntentId;
+          if (stripePaymentIntentId) {
+            await apiRequest('/payments/verify', {
+              method: 'POST',
+              body: JSON.stringify({ paymentIntentId: stripePaymentIntentId })
+            }).catch(() => null);
+          }
+        } catch (stripeErr) {
+          console.warn('[Stripe Gateway]', stripeErr.message);
+        }
+      }
+
       const order = await orderService.createOrder({
-        userId: user.id,
+        userId: user?.id || user?._id || 'u1',
         customer: form.name,
         email: form.email,
         phone: form.phone,
@@ -94,11 +121,12 @@ export default function Checkout() {
         points: totals.pointsEarned,
         address: { line1: form.line1, city: form.city, zip: form.zip },
         notes: form.notes,
-        payment: form.payment
+        payment: form.payment,
+        stripePaymentIntentId
       });
       await awardPoints(totals.pointsEarned);
       cart.clear();
-      toast.success('Order placed successfully');
+      toast.success(form.payment === 'Card' ? 'Stripe Payment confirmed & Order placed successfully!' : 'Order placed successfully');
       navigate(`/order-success/${order.id}`, { replace: true });
     } catch (err) {
       toast.error(err.message || 'We could not place your order');

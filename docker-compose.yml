@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: fitfuel-mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: fitfuel
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: fitfuel-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongodb:27017/fitfuel
+      - JWT_SECRET=fitfuel_jwt_super_secret_key_2026_fitness_ecommerce
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo-data:

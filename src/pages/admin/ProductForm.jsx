@@ -4,6 +4,7 @@ import Icon from '../../components/common/Icon';
 import ProductArt from '../../components/product/ProductArt';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import { productService } from '../../services';
+import { apiRequest } from '../../services/http';
 import { CATEGORIES, categoryBySlug } from '../../data/categories';
 import { BRANDS } from '../../data/products';
 import { rs } from '../../utils/format';
@@ -15,7 +16,7 @@ const ART_KEYS = ['tub', 'whey', 'creatine', 'preworkout', 'gainer', 'bottle', '
 const BLANK = {
   name: '', brand: BRANDS[0] || '', category: 'protein', group: 'supplement',
   price: '', discountPrice: '', stock: '', description: '', art: 'tub',
-  tags: '', featured: false, bestseller: false
+  imageUrl: '', tags: '', featured: false, bestseller: false
 };
 
 export default function AdminProductForm() {
@@ -30,6 +31,31 @@ export default function AdminProductForm() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(editing);
   const [saving, setSaving] = useState(false);
+  const [uploadingImage, setUploadingImage] = useState(false);
+
+  const handleImageUpload = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploadingImage(true);
+    const formData = new FormData();
+    formData.append('image', file);
+    try {
+      const data = await apiRequest('/upload', {
+        method: 'POST',
+        body: formData
+      });
+      if (data?.imageUrl) {
+        setForm((f) => ({ ...f, imageUrl: data.imageUrl }));
+        toast.success('Product image uploaded successfully!');
+      } else {
+        toast.error(data?.message || 'Image upload failed');
+      }
+    } catch (uploadErr) {
+      toast.error(uploadErr.message || 'Could not connect to image upload endpoint');
+    } finally {
+      setUploadingImage(false);
+    }
+  };
 
   useEffect(() => {
     if (!editing) return;
@@ -40,7 +66,7 @@ export default function AdminProductForm() {
         setForm({
           name: p.name, brand: p.brand, category: p.category, group: p.group,
           price: String(p.price), discountPrice: String(p.discountPrice), stock: String(p.stock),
-          description: p.description, art: p.art, tags: (p.tags || []).join(', '),
+          description: p.description, art: p.art, imageUrl: p.imageUrl || '', tags: (p.tags || []).join(', '),
           featured: p.featured, bestseller: p.bestseller
         });
         setSpecs(p.specifications?.length ? p.specifications.map((s) => [...s]) : [['', '']]);
@@ -94,7 +120,7 @@ export default function AdminProductForm() {
     const payload = {
       name: form.name.trim(), brand: form.brand.trim(), category: form.category, group: form.group,
       price: Number(form.price), discountPrice: Number(form.discountPrice), stock: Number(form.stock),
-      description: form.description.trim(), art: form.art,
+      description: form.description.trim(), art: form.art, imageUrl: form.imageUrl,
       tags: form.tags.split(',').map((t) => t.trim()).filter(Boolean),
       specifications: specs.filter(([k, v]) => k.trim() && v.trim()),
       featured: form.featured, bestseller: form.bestseller
@@ -174,6 +200,36 @@ export default function AdminProductForm() {
                   {ART_KEYS.map((k) => <option key={k} value={k}>{k}</option>)}
                 </select>
               </label>
+            </div>
+            <div style={{
+              background: 'var(--ff-surface-2, #fafafa)',
+              border: '1px dashed var(--ff-border, #ccc)',
+              borderRadius: 8,
+              padding: '14px 18px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 8
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: 13, fontWeight: 600 }}>Cloudinary Product Media</span>
+                <span style={{ fontSize: 11, background: '#29ABE2', color: '#fff', padding: '2px 8px', borderRadius: 4 }}>
+                  Cloud Storage
+                </span>
+              </div>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                disabled={uploadingImage}
+                style={{ fontSize: 13 }}
+              />
+              {uploadingImage && <small style={{ color: '#29ABE2' }}>Uploading image to Cloudinary storage...</small>}
+              {form.imageUrl && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 6 }}>
+                  <img src={form.imageUrl} alt="Uploaded preview" style={{ width: 44, height: 44, objectFit: 'cover', borderRadius: 6 }} />
+                  <small style={{ wordBreak: 'break-all', color: '#666' }}>{form.imageUrl}</small>
+                </div>
+              )}
             </div>
             <label className="ff-field">
               <span>Description</span>

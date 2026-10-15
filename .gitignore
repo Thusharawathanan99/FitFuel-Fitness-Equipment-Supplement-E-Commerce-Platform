@@ -1,4 +1,5 @@
 node_modules
+server/node_modules
 dist
 dist-ssr
 .vite
@@ -7,3 +8,9 @@ dist-ssr
 npm-debug.log*
 report/
 .temp*
+.env
+.env.*
+!.env.example
+*.log
+uploads/
+server/uploads/

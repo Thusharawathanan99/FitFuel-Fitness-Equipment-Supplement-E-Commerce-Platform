@@ -1,4 +1,4 @@
-import { ok, fail } from './http';
+import { ok, fail, apiRequest } from './http';
 import { storage } from '../utils/storage';
 import { orderRef } from '../utils/format';
 
@@ -43,15 +43,56 @@ const seed = () => {
 };
 
 export const orderService = {
-  getOrders: (userId) => {
+  async getOrders(userId) {
+    try {
+      const res = await apiRequest(`/orders/my-orders?userId=${userId || ''}`);
+      if (res?.data) return res.data;
+    } catch {
+      // Fallback
+    }
     const all = seed();
     return ok(userId ? all.filter((o) => o.userId === userId) : all);
   },
-  getOrderById: (id) => {
+
+  async getAllOrders() {
+    try {
+      const res = await apiRequest('/orders/all');
+      if (res?.data) return res.data;
+    } catch {
+      // Fallback
+    }
+    return ok(seed());
+  },
+
+  async getOrderById(id) {
+    try {
+      const res = await apiRequest(`/orders/${id}`);
+      if (res.data) return res.data;
+    } catch {
+      // Fallback
+    }
     const found = seed().find((o) => o.id === id);
     return found ? ok(found) : fail('Order not found');
   },
-  createOrder(order) {
+
+  async createOrder(order) {
+    try {
+      // Calls Node backend which sends Nodemailer confirmation email & records order
+      const res = await apiRequest('/orders', {
+        method: 'POST',
+        body: JSON.stringify(order)
+      });
+      if (res.data) {
+        // Also sync local storage
+        const all = seed();
+        all.unshift(res.data);
+        storage.set(ORDERS, all);
+        return res.data;
+      }
+    } catch (err) {
+      console.warn('[Order Service] Falling back to local storage order placement:', err.message);
+    }
+
     const all = seed();
     const record = {
       ...order,
@@ -65,7 +106,18 @@ export const orderService = {
     storage.set(ORDERS, all);
     return ok(record);
   },
-  updateOrderStatus(id, stage) {
+
+  async updateOrderStatus(id, stage) {
+    try {
+      const res = await apiRequest(`/orders/${id}/status`, {
+        method: 'PUT',
+        body: JSON.stringify({ stage, status: ORDER_STAGES[stage] })
+      });
+      if (res.data) return res.data;
+    } catch {
+      // Fallback
+    }
+
     const all = seed();
     const i = all.findIndex((o) => o.id === id);
     if (i < 0) return fail('Order not found');

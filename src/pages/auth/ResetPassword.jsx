@@ -12,6 +12,7 @@ export default function ResetPassword() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState(params.get('email') || '');
+  const [token, setToken] = useState(params.get('token') || '');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
   const [errors, setErrors] = useState({});
@@ -20,6 +21,7 @@ export default function ResetPassword() {
   const submit = async (e) => {
     e.preventDefault();
     const next = {};
+    if (!token) next.form = 'Reset token is missing or invalid. Please request a new password reset link.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) next.email = 'Enter a valid email address.';
     if (password.length < 8) next.password = 'Use at least 8 characters.';
     if (confirm !== password) next.confirm = 'Both passwords must match.';
@@ -28,7 +30,7 @@ export default function ResetPassword() {
 
     setBusy(true);
     try {
-      await authService.resetPassword(email, password);
+      await authService.resetPassword(email, password, token);
       toast.success('Password updated — you can sign in now');
       navigate('/login', { replace: true });
     } catch (err) {

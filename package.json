@@ -6,6 +6,8 @@
   "description": "FitFuel — Fitness Equipment & Supplement E-Commerce Platform (frontend)",
   "scripts": {
     "dev": "vite",
+    "server": "node server/server.js",
+    "seed": "node server/data/seed.js",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext js,jsx"

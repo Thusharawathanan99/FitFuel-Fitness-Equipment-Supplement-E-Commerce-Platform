@@ -1,9 +1,9 @@
-import { ok } from './http';
+import { ok, apiRequest } from './http';
 import { storage } from '../utils/storage';
 
 /**
  * Reviews are seeded deterministically from the product id so every visit shows the
- * same history, then customer-written reviews are layered on from localStorage.
+ * same history, then customer-written reviews are layered on from localStorage or API.
  */
 const KEY = 'reviews';
 
@@ -47,12 +47,35 @@ const seedFor = (product) => {
 const readCustom = () => storage.get(KEY, []);
 
 export const reviewService = {
-  getReviews(product) {
+  async getReviews(product) {
+    try {
+      const res = await apiRequest(`/reviews/${product.id}`);
+      if (res?.data && res.data.length > 0) {
+        return res.data;
+      }
+    } catch {
+      // Fallback
+    }
     const custom = readCustom().filter((r) => r.productId === product.id);
     return ok([...custom, ...seedFor(product)]);
   },
 
-  addReview(review) {
+  async addReview(review) {
+    try {
+      const res = await apiRequest(`/reviews/${review.productId}`, {
+        method: 'POST',
+        body: JSON.stringify(review)
+      });
+      if (res?.data) {
+        const all = readCustom();
+        all.unshift(res.data);
+        storage.set(KEY, all);
+        return res.data;
+      }
+    } catch {
+      // Fallback
+    }
+
     const all = readCustom();
     const record = { ...review, id: `r${Date.now().toString(36)}`, date: new Date().toISOString(), verified: true };
     all.unshift(record);

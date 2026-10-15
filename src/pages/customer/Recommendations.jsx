@@ -5,6 +5,7 @@ import ProductGrid from '../../components/product/ProductGrid';
 import Icon from '../../components/common/Icon';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import { orderService, productService } from '../../services';
+import { apiRequest } from '../../services/http';
 import { storage } from '../../utils/storage';
 import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
@@ -33,14 +34,29 @@ export default function Recommendations() {
   const [all, setAll] = useState([]);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [aiSummary, setAiSummary] = useState(null);
 
   useEffect(() => {
     let alive = true;
-    Promise.all([productService.getProducts(), user ? orderService.getOrders(user.id) : Promise.resolve([])])
-      .then(([products, history]) => {
+    const storedBmi = storage.get('bmi', {}).bmi;
+    Promise.all([
+      productService.getProducts(),
+      user ? orderService.getOrders(user.id) : Promise.resolve([]),
+      apiRequest('/ai/recommendations', {
+        method: 'POST',
+        body: JSON.stringify({
+          bmi: storedBmi || 22.5,
+          goal: 'muscle_gain'
+        })
+      }).catch(() => null)
+    ])
+      .then(([products, history, aiData]) => {
         if (!alive) return;
         setAll(products);
         setOrders(history);
+        if (aiData?.data?.aiSummary) {
+          setAiSummary(aiData.data.aiSummary);
+        }
       })
       .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
@@ -95,6 +111,47 @@ export default function Recommendations() {
             : 'Right now these are our highest-rated products. Shop, save and rate a few things and this page will learn what you like.'}
         </p>
       </div>
+
+      {aiSummary && (
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(41, 171, 226, 0.08) 0%, rgba(41, 171, 226, 0.02) 100%)',
+          border: '1px solid rgba(41, 171, 226, 0.25)',
+          borderRadius: 12,
+          padding: '20px 24px',
+          marginBottom: 32,
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 16
+        }}>
+          <div style={{
+            background: 'var(--ff-brand-500)',
+            color: '#fff',
+            borderRadius: 8,
+            padding: '8px 10px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Icon name="sparkle" size={20} color="#fff" />
+          </div>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
+              <strong style={{ fontSize: 16 }}>FitFuel AI Intelligence Engine</strong>
+              <span style={{
+                background: 'var(--ff-brand-100)',
+                color: 'var(--ff-brand-700)',
+                fontSize: 11,
+                padding: '2px 8px',
+                borderRadius: 99,
+                fontWeight: 600
+              }}>Active ML Analysis</span>
+            </div>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: 'var(--ff-text-secondary)' }}>
+              {aiSummary}
+            </p>
+          </div>
+        </div>
+      )}
 
       {!isAuthenticated && (
         <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,

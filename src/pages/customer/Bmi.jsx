@@ -32,7 +32,13 @@ export default function Bmi() {
   const [age, setAge] = useState(saved.age || '');
   const [sex, setSex] = useState(saved.sex || 'male');
   const [activity, setActivity] = useState(saved.activity || '1.55');
-  const [result, setResult] = useState(saved.bmi ? { bmi: saved.bmi } : null);
+  const [result, setResult] = useState(() => {
+    if (!saved.bmi) return null;
+    const h = Number(saved.height) || 175;
+    const metres = h / 100;
+    const ideal = [Math.round(18.5 * metres * metres), Math.round(24.9 * metres * metres)];
+    return { bmi: saved.bmi, ideal };
+  });
   const [errors, setErrors] = useState({});
 
   const band = result ? bandFor(result.bmi) : null;
@@ -149,9 +155,11 @@ export default function Bmi() {
                   </span>
                   <div>
                     <span className={`ff-badge ${band.tone}`}>{band.label}</span>
-                    <p className="ff-muted" style={{ fontSize: 13, marginTop: 8 }}>
-                      Healthy weight for your height: {result.ideal[0]}–{result.ideal[1]} kg
-                    </p>
+                    {result.ideal?.length ? (
+                      <p className="ff-muted" style={{ fontSize: 13, marginTop: 8 }}>
+                        Healthy weight for your height: {result.ideal[0]}–{result.ideal[1]} kg
+                      </p>
+                    ) : null}
                   </div>
                 </div>
 

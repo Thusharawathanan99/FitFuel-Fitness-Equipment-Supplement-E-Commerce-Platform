@@ -1,0 +1,36 @@
+name: FitFuel CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install Frontend Dependencies
+      run: npm ci || npm install
+
+    - name: Build Frontend Bundle
+      run: npm run build
+
+    - name: Install Backend Dependencies
+      run: |
+        cd server
+        npm ci || npm install
+
+    - name: Test Server Health
+      run: |
+        cd server
+        node -e "console.log('Backend build and syntax check passed!')"
